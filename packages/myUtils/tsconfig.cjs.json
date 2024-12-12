@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "dist/cjs",
+    "rootDir": "src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false, // 尝试禁用 skipLibCheck
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"], // 包括所有 .ts 和 .tsx 文件
+  "exclude": ["node_modules", "dist", "test"], // 排除 node_modules 和 dist 目录
+}

@@ -1,0 +1,17 @@
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --global-fonts: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+body{
+  font-family: var(--global-fonts);
+}

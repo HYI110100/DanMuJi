@@ -1,0 +1,51 @@
+{
+  "name": "DanMuJi",
+  "version": "1.0.0",
+  "description": "实时获取B站直播间弹幕",
+  "main": "",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"pnpm run -F backend dev\" \"pnpm run -F frontend dev\"",
+    "build": "pnpm run -F backend build:pkg && pnpm run -F frontend build",
+    "dev:b": "pnpm run -F backend dev",
+    "build:b": "pnpm run -F backend build:pkg",
+    "dev:f": "pnpm run -F frontend dev",
+    "build:f": "pnpm run -F frontend build",
+    
+    "build:u": "pnpm run -F my-utils build"
+  },
+  "keywords": [
+    "danmuji",
+    "bilibili",
+    "哔哩哔哩",
+    "B站",
+    "B站直播",
+    "哔哩哔哩直播",
+    "B站直播弹幕",
+    "哔哩哔哩直播弹幕",
+    "弹幕姬"
+  ],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "my-utils": "workspace:*",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13"
+  },
+  "resolutions": {
+    "esbuild": "npm:esbuild@0.23.1"
+  },
+  "engines": {
+    "node": ">=16.17.0"
+  },
+  "exports": {
+    "./package.json": "./package.json"
+  }
+}
