@@ -27,6 +27,11 @@ const router = createRouter({
           name: "Send",
           component: () => import("~/pages/send.vue"),
         },
+        {
+          path: "/test",
+          name: "Send",
+          component: () => import("~/pages/test.vue"),
+        },
       ],
     },
     {
