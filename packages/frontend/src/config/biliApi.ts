@@ -11,7 +11,8 @@ const path = {
   genWebTicket: 'https://api.bilibili.com/bapis/bilibili.api.ticket.v1.Ticket/GenWebTicket', // 获取bv
   getBuvid: 'https://api.bilibili.com/x/frontend/finger/spi', // 获取bv
   liveMsgSend: 'https://api.live.bilibili.com/msg/send', // 直播消息发送
-  getMedalIcon: '	https://workers.laplace.cn/api/bilibili/wealth-config', // 直播消息发送
+  getMedalIcon: 'https://workers.laplace.cn/api/bilibili/wealth-config', // 直播消息发送
+  getListForUserBillRecord: 'https://pay.bilibili.com/payplatform/pay/listForUserBillRecord', // 交易记录 https://pay.bilibili.com/pay-v2/all-bill?noTitleBar=1&native
 };
 // 获取直播间用户排行榜
 // https://api.live.bilibili.com/xlive/general-interface/v1/rank/queryContributionRank?ruid=590852876&room_id=1946527922&page=1&page_size=100&type=online_rank&switch=contribution_rank&platform=web

@@ -11,6 +11,7 @@ import { BuTicket, Buvid } from "~/types/biliApi/misc";
 import { createBiliTicketHmac } from "~/utils/createBiliTicketHmac";
 import { UserInfoByNva } from "~/types/biliApi/user";
 import { LoginByQR, LoginQR, Logout } from "~/types/biliApi/login";
+import { ListForUserBillRecord } from "~/types/biliApi/pay";
 
 // headers: { 'Cache-Control': 'no-cache' }, // 强制缓存失效
 const instance = axios.create({
@@ -230,4 +231,29 @@ export function postSendLiveMsg() {
         .then(resolve, reject);
     });
   });
+}
+
+
+/**
+ * 交易记录
+ * @param currentPage 当前页码
+ * @param pageSize 每页数量
+ * @param traceId 当前时间戳（毫秒）
+ * @param timestamp 当前时间戳（毫秒）
+ * @param sdkVersion 1.1.7
+ * @param endTime 开始日期 YYYY-MM-DD HH:mm:ss
+ * @param beginTime 结束日期 YYYY-MM-DD HH:mm:ss
+ */
+export function getListForUserBillRecord() {
+  return createRequest<ListForUserBillRecord, {
+    currentPage: number;
+    pageSize: number;
+    traceId: number;
+    timestamp: number;
+    sdkVersion?: string;
+    endTime: string;
+    beginTime: string;
+  }>((signal, data) =>
+    instance.post(biliApi.getListForUserBillRecord, { ...data, sdkVersion: '1.1.7' }, { signal, headers: { 'Cache-Control': 'no-cache' } })
+  );
 }
