@@ -29,7 +29,7 @@ const router = createRouter({
         },
         {
           path: "/test",
-          name: "Send",
+          name: "Test",
           component: () => import("~/pages/test.vue"),
         },
       ],
